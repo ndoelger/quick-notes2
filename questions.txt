@@ -1,0 +1,16 @@
+export function getUser() {
+  const token = getToken();
+  return token ? JSON.parse(atob(token.split(".")[1])).user : null;
+}
+
+.user? 
+
+what's the point of a SECRET?
+
+
+module.exports = function (req, res, next) {
+  if (!req.user) return res.status(401).json("Unauthorized");
+  next();
+};
+
+what does this do?
